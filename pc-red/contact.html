@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="css/layout.css?v=1.0.0">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<!-- <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=eu0WedayzrZKPfvQAFxoVqF9zazdwbxg&s=1"> -->
+		<!-- <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=6wY7GTtcCHAfZpM7zA9wiFwBrpTVpxcW&s=1"> -->
+		</script>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<header class="header" id="header">
+			<div class="wrapper">
+				<div class="hd-l">
+					<img class="logo" src="images/logo.png" alt="" />
+				</div>
+				<div class="hd-r">
+					<ul class="h-nav">
+						<li class="nav-item"><a class="a" href="case.html">音响改装</a></li>
+						<li class="nav-item"><a class="a" href="tm-case.html">汽车贴膜</a></li>
+					</ul>
+					<div class="h-contact">
+						<p><span class="label">音响码头技术顾问：</span> 13871138326（阿星）</p>
+						<p><span class="label">音响码头技术顾问：</span> 13871138326（陈亿）</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="banner-common" id="banner">
+			<div class="wrapper">
+				<div class="banner-title-en">CONTACT</C>
+				</div>
+				<div class="banner-title-cn">联系我们</div>
+			</div>
+			<img class="banner-img" src="images/project.jpg" alt="">
+		</div>
+		<ul class="navbar" id="navbar">
+			<li class="nav-item">
+				<a href="index.html" class="a">首 页</a>
+			</li>
+			<li class="nav-item">
+				<a class="a" href="tm-case.html">
+					贴膜改装
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="a" href="taobao.com" target="_blank">
+					淘宝店
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="case.html" class="a">汽车改装案例</a></li>
+			<li class="nav-item">
+				<a href="brand.html" class="a">代理品牌</a></li>
+			<li class="nav-item">
+				<a href="news.html" class="a">活动及资讯</a></li>
+			<li class="nav-item">
+				<a href="about.html" class="a">关于我们</a></li>
+			<li class="nav-item active">
+				<a href="contact.html" class="a">联系我们</a></li>
+		</ul>
+		<div class="contact">
+			<div class="main wrapper">
+				<div class="breadcrumb">
+					您的位置：首页 > 联系我们 >
+				</div>
+				<!-- 内容区 富文本 -->
+				<div class="content edit_textBox">
+					<img src="images/contact.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="copyright">版权所有© 广州名膜汇贸易有限公司 粤ICP备17005634号</div>
+		</footer>
+		<!-- <script src="js/common.js" type="text/javascript" charset="utf-8"></script> -->
+		<script type="text/javascript">
+			window.onscroll = function() {
+				if (document.documentElement.scrollTop <= document.getElementById('banner').offsetHeight) {
+					document.getElementById('navbar').style.position = 'relative';
+					document.body.style.paddingTop = 0
+					document.getElementById('header').style.display = 'block'
+					// console.log('no')
+				} else {
+					document.getElementById('navbar').style.position = 'fixed';
+					document.body.style.paddingTop = document.getElementById('navbar').offsetHeight + 'px'
+					document.getElementById('header').style.display = 'none'
+					// console.log('yes')
+				}
+			};
+		</script>
+	</body>
+</html>
