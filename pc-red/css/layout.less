@@ -1,4 +1,4 @@
-@color: #D10223;
+@color: #d10223;
 .border-rds(@radius) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
@@ -422,10 +422,8 @@ layer弹窗样式
 
 @font-face {
 	font-family: 'Rajdhani';
-	 src: url('../fonts/Rajdhani-Bold.eot');
-	     src:url('../fonts/Rajdhani-Bold.woff') format('woff'),
-	         url('../fonts/Rajdhani-Bold.ttf') format('truetype'),
-	         url('../fonts/Rajdhani-Bold.svg') format('svg');
+	src: url('../fonts/Rajdhani-Bold.eot');
+	src: url('../fonts/Rajdhani-Bold.woff') format('woff'), url('../fonts/Rajdhani-Bold.ttf') format('truetype'), url('../fonts/Rajdhani-Bold.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -437,6 +435,7 @@ layer弹窗样式
 // }
 
 body {
+	min-width: 1200px;
 	margin: 0 auto;
 	font-family: 'PingFang SC', Microsoft YaHei, arial, tahoma, sans-serif;
 }
@@ -569,11 +568,8 @@ body {
 	.map-box {
 		width: 100%;
 		height: 820px;
-		// background-color: pink;
 		position: relative;
 		overflow: hidden;
-		// background: url(../images/call.png) center center no-repeat;
-		// background-size: 100% 100%
 		.map {
 			position: absolute;
 			left: 0;
@@ -582,14 +578,15 @@ body {
 			height: 100%;
 		}
 		.contact-box {
-			// position: absolute;
-			// top: 120px;
+			.bs_bb();
+			width: 590px;
+			min-height: 450px;
 			position: relative;
 			z-index: 2;
 			display: inline-block;
 			margin-top: 120px;
 			background-color: #fff;
-			padding: 50px;
+			padding: 45px 50px;
 			box-shadow: 0px 13px 21px 0px rgba(73, 73, 73, 0.2);
 			border-radius: 10px;
 			font-family: Rajdhani;
@@ -597,6 +594,7 @@ body {
 				font-size: 60px;
 				font-weight: bold;
 				color: @color;
+				line-height: 1;
 			}
 			.name {
 				font-size: 30px;
@@ -612,9 +610,10 @@ body {
 			.item {
 				font-size: 24px;
 				color: #333;
-				line-height: 1;
-				margin-bottom: 30px;
-				&:last-child{
+				line-height: 2;
+				margin-bottom: 20px;
+				.text_hide(4);
+				&:last-child {
 					margin-bottom: 0;
 				}
 			}
@@ -625,6 +624,7 @@ body {
 			}
 			.i-title {
 				color: @color;
+				margin-right: 10px;
 			}
 		}
 	}
@@ -637,7 +637,6 @@ body {
 	}
 }
 .navbar {
-	// margin-top: 200px;
 	width: 100%;
 	background: rgba(49, 49, 49, 1);
 	display: flex;
@@ -647,8 +646,6 @@ body {
 	position: relative;
 	left: 0;
 	top: 0;
-	// height: 80px;
-	// padding-top: 14px;
 	.nav-item {
 		.a {
 			display: block;
@@ -684,7 +681,7 @@ body {
 		.quality,
 		.refit,
 		.new {
-			padding-top: 100px;
+			padding-top: 95px;
 			.title-en {
 				font-size: 60px;
 				font-family: Rajdhani;
@@ -700,12 +697,12 @@ body {
 			}
 		}
 		.quality {
-			height: 800px;
+			height: 690px;
 			background: url(../images/banner2.jpg) center center no-repeat;
 			background-size: 100% 100%;
 			.img {
-				width: 390px;
-				height: 221px;
+				width: 100%;
+				height: 220px;
 			}
 			.sub-nav {
 				width: 1200px;
@@ -756,7 +753,7 @@ body {
 					height: 280px;
 					flex-shrink: 0;
 					margin-right: 15px;
-					&:nth-child(3n){
+					&:nth-child(3n) {
 						margin-right: 0;
 					}
 					&:last-child {
@@ -764,7 +761,7 @@ body {
 					}
 				}
 				.img {
-					width: 390px;
+					width: 100%;
 					height: 220px;
 				}
 				.title {
@@ -786,10 +783,10 @@ body {
 			}
 			.swiper-pagination-bullet {
 				background: none;
-			    width: auto;
-			    display: block;
-			    border-radius: 0;
-			    opacity: 1;
+				width: auto;
+				display: block;
+				border-radius: 0;
+				opacity: 1;
 				flex-shrink: 0;
 				font-size: 24px;
 				color: rgba(51, 51, 51, 1);
@@ -806,20 +803,19 @@ body {
 				&:last-child {
 					margin-right: 0;
 				}
-				
 			}
 			.swiper-pagination-bullet-active {
-			    color: @color;
-			    &:after {
-			    	content: '';
-			    	position: absolute;
-			    	left: 0;
-			    	bottom: 0;
-			    	display: block;
-			    	height: 4px;
-			    	width: 100%;
-			    	background: @color;
-			    }
+				color: @color;
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					display: block;
+					height: 4px;
+					width: 100%;
+					background: @color;
+				}
 			}
 			.nav-item {
 				flex-shrink: 0;
@@ -852,35 +848,6 @@ body {
 			}
 		}
 		.refit {
-			.search-box {
-				display: flex;
-			}
-			.search {
-				width: 600px;
-				overflow: hidden;
-				// height: 54px;
-				position: relative;
-				border: 1px solid rgba(0, 0, 0, 1);
-				margin-right: 20px;
-				&:after {
-					content: '';
-					display: block;
-					width: 36px;
-					height: 36px;
-					background: url(../images/search-icon.png) center center no-repeat;
-					background-size: 100% 100%;
-					position: absolute;
-					top: 10px;
-					right: 10px;
-				}
-			}
-			.search-input {
-				height: 56px;
-				border: 0;
-				padding-left: 20px;
-				padding-right: 50px;
-				// border-left: 1px solid rgba(0, 0, 0, 1);
-			}
 			.hot {
 				line-height: 54px;
 				.text_one();
@@ -904,7 +871,6 @@ body {
 				flex: 1;
 				display: flex;
 				flex-wrap: wrap;
-				
 			}
 			// .brand-box{
 			// 	max-height: 156px;
@@ -921,10 +887,10 @@ body {
 					background-color: @color;
 					color: #fff;
 				}
-				&:hover{
-					color:@color;
+				&:hover {
+					color: @color;
 				}
-				&:nth-child(n+8){
+				&:nth-child(n + 8) {
 					margin-top: 22px;
 				}
 			}
@@ -940,7 +906,6 @@ body {
 				// &:nth-of-type(n+8){
 				// 	margin-top: 20px;
 				// }
-				
 			}
 			.brand-icon {
 				height: 30px;
@@ -978,7 +943,7 @@ body {
 				border: 1px solid @color;
 				font-size: 14px;
 				color: rgba(51, 51, 51, 1);
-				margin: 50px auto 0;
+				margin: 50px auto 80px;
 				position: relative;
 				&:hover {
 					background-color: @color;
@@ -1015,19 +980,20 @@ body {
 				height: 310px;
 			}
 			.about {
-				height: 230px;
+				// height: 230px;
 				padding-top: 45px;
 				.title {
 					font-size: 30px;
 					color: @color;
 					line-height: 36px;
 					margin-bottom: 20px;
+					font-weight: 400;
 					.text_hide(2);
 				}
 				.desc {
 					color: rgba(102, 102, 102, 1);
 					line-height: 36px;
-				    font-size: 16px;
+					font-size: 16px;
 					.text_one();
 				}
 			}
@@ -1049,7 +1015,7 @@ body {
 		.new-r {
 			flex: 1;
 			padding-right: 70px;
-			height: 620px;
+			// height: 620px;
 			overflow-y: auto;
 			.item {
 				height: 140px;
@@ -1074,6 +1040,7 @@ body {
 				.date {
 					font-size: 18px;
 					margin-bottom: 15px;
+					color: rgba(153, 153, 153, 1);
 				}
 				.title {
 					font-size: 18px;
@@ -1146,35 +1113,6 @@ body {
 // 改装案例
 .case {
 	.refit {
-		.search-box {
-			display: flex;
-		}
-		.search {
-			width: 600px;
-			overflow: hidden;
-			// height: 54px;
-			position: relative;
-			border: 1px solid rgba(0, 0, 0, 1);
-			margin-right: 20px;
-			&:after {
-				content: '';
-				display: block;
-				width: 36px;
-				height: 36px;
-				background: url(../images/search-icon.png) center center no-repeat;
-				background-size: 100% 100%;
-				position: absolute;
-				top: 10px;
-				right: 10px;
-			}
-		}
-		.search-input {
-			height: 56px;
-			border: 0;
-			padding-left: 20px;
-			padding-right: 50px;
-			// border-left: 1px solid rgba(0, 0, 0, 1);
-		}
 		.hot {
 			line-height: 54px;
 			.text_one();
@@ -1205,32 +1143,32 @@ body {
 			line-height: 30px;
 			padding: 0 5px;
 			margin-right: 15px;
-			cursor:pointer;
+			cursor: pointer;
 			&.active {
 				background-color: @color;
 				color: #fff;
 			}
-			&:hover{
+			&:hover {
 				color: @color;
 			}
-			&:nth-child(n+8){
+			&:nth-child(n + 8) {
 				margin-top: 22px;
 			}
 		}
 		.filter-item-brand {
-				// display: block;
-				display: flex;
-				flex-wrap: nowrap;
-				&.active {
-					background-color: #fff;
-					color: @color;
-					border: 1px solid @color;
-				}
+			// display: block;
+			display: flex;
+			flex-wrap: nowrap;
+			&.active {
+				background-color: #fff;
+				color: @color;
+				border: 1px solid @color;
 			}
+		}
 		.brand-icon {
-				height: 30px;
-				margin-right: 10px;
-				vertical-align: middle;
+			height: 30px;
+			margin-right: 10px;
+			vertical-align: middle;
 		}
 		.more-arrow {
 			color: @color;
@@ -1264,23 +1202,31 @@ body {
 	}
 	.left {
 		width: 770px;
+		padding-bottom: 50px;
 		.date {
 			line-height: 3px;
 			font-size: 18px;
 			font-family: Rajdhani;
 			font-weight: 400;
 			color: rgba(51, 51, 51, 1);
+			margin-bottom: 30px;
 		}
 		// 编辑器？
 		.title {
 			font-size: 36px;
 			font-family: PingFang SC;
 			font-weight: bold;
-			color: rgba(51, 51, 51, 1);
+			color: #333333;
 			line-height: 60px;
+			margin-bottom: 40px;
 		}
 		.img {
 			width: 100%;
+		}
+		.txt {
+			font-size: 18px;
+			color: rgba(51, 51, 51, 1);
+			line-height: 48px;
 		}
 	}
 	.right {
@@ -1302,6 +1248,7 @@ body {
 			color: rgba(51, 51, 51, 1);
 		}
 		.tel {
+			letter-spacing: 5px;
 			font-size: 48px;
 			font-family: Rajdhani;
 			font-weight: bold;
@@ -1322,9 +1269,10 @@ body {
 		.c-box {
 			display: flex;
 			.item {
+				cursor: pointer;
+				font-weight: 400;
 				font-size: 20px;
 				font-family: PingFang SC;
-				font-weight: bold;
 				color: rgba(51, 51, 51, 1);
 				margin-right: 25px;
 				position: relative;
@@ -1332,6 +1280,7 @@ body {
 					margin-right: 0;
 				}
 				&.active {
+					font-weight: 700;
 					color: @color;
 					&:after {
 						content: '';
@@ -1356,6 +1305,8 @@ body {
 			.item {
 				margin-bottom: 22px;
 				width: 100%;
+			}
+			.link-all {
 				display: flex;
 				justify-content: space-between;
 			}
@@ -1429,7 +1380,7 @@ body {
 		line-height: 40px;
 		color: rgba(51, 51, 51, 1);
 		position: relative;
-		&:hover{
+		&:hover {
 			color: @color;
 		}
 		&.active {
@@ -1477,14 +1428,15 @@ body {
 			width: 128px;
 			line-height: 28px;
 			text-align: center;
+			margin-left: 12px;
 			// background: url(../images/promotion.png) center center no-repeat;
 			// background-size: 100% 100%;
 			border-radius: 14px;
 			&.yellow {
-				background:rgba(245,209,1,1);
+				background: rgba(245, 209, 1, 1);
 			}
 			&.black {
-				background:rgba(67,67,67,1);
+				background: rgba(67, 67, 67, 1);
 			}
 			&.red {
 				background-color: @color;
@@ -1571,7 +1523,7 @@ body {
 			width: 100%;
 			vertical-align: middle;
 		}
-		.banner01-img{
+		.banner01-img {
 			margin-top: -1px;
 		}
 		.banner01 {
@@ -1835,15 +1787,16 @@ body {
 	}
 	.introduce {
 		background: rgba(255, 255, 255, 1);
-		padding-bottom: 50px;
+		padding: 0 45px 50px;
+		min-width: 1200px;
 		.content {
-			width: 1850px;
+			width: 100%;
 			margin: 0 auto;
 			display: flex;
 			flex-wrap: wrap;
 			.intro-i {
-				width: 610px;
-				margin-right: 10px;
+				width: 33%;
+				margin-right: 0.5%;
 				&:nth-child(3n) {
 					margin-right: 0px;
 				}
@@ -1852,7 +1805,7 @@ body {
 				}
 				.img {
 					width: 100%;
-					height: 340px;
+					height: auto;
 				}
 				.title {
 					font-size: 14px;
@@ -2018,6 +1971,7 @@ body {
 			font-family: Rajdhani;
 			color: @color;
 			font-weight: 700;
+			margin-right: 10px;
 		}
 		.hot-t-cn {
 			font-size: 30px;
@@ -2030,10 +1984,15 @@ body {
 			font-family: PingFang SC;
 			font-weight: 400;
 			color: rgba(51, 51, 51, 1);
+			display: flex;
+			align-items: center;
 		}
 
 		.arrow {
-			color: @color;
+			width: 14px;
+			height: 26px;
+			margin: 0 20px;
+			vertical-align: middle;
 		}
 		.hot-bd {
 			width: 100%;
@@ -2127,7 +2086,6 @@ body {
 			}
 		}
 	}
-
 	.nav-all {
 		font-size: 18px;
 		font-family: PingFang SC;
@@ -2136,13 +2094,20 @@ body {
 	}
 	.current {
 		background: @color;
-		border-radius: 3px;
+		.border-rds(10px);
 		.nav-all {
 			color: #fff;
 		}
+		&:hover {
+			cursor: text;
+			.nav-all {
+				color: #fff !important;
+				cursor: text;
+			}
+		}
 	}
 }
-.no-result{
+.no-result {
 	display: flex;
 	width: 100%;
 	height: 630px;
@@ -2150,31 +2115,79 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	.img{
+	.img {
 		display: block;
 		width: 430px;
 		margin-bottom: 26px;
 	}
-	.tip{
+	.tip {
 		font-weight: 300;
 		text-align: center;
-		font-size:30px;
-		color:rgba(153,153,153,1);
+		font-size: 30px;
+		color: rgba(153, 153, 153, 1);
 	}
 }
 // 汽车品牌
-.brand-box{
+.brand-box {
 	flex-wrap: wrap;
 }
-.filter-item{
-	line-height: 32px!important;
+.filter-item {
+	.bs_bb();
+	height: 32px;
+	overflow: hidden;
+	line-height: 32px !important;
+	&.active {
+		&:hover {
+			color: #fff !important;
+			cursor: text !important;
+		}
+	}
 }
-.filter-item-brand{
+.main #brandBox .filter-item-brand {
 	justify-content: center;
 	align-items: center;
-	    line-height: 32px!important;
-	    padding: 0px!important;
-		width: 145px!important;
+	line-height: 32px !important;
+	padding: 0px !important;
+	width: 145px !important;
+	display: none;
+	&.active {
+		&:hover {
+			color: @color!important;
+		}
+	}
+}
+// 搜索
+.search-box {
+	display: flex;
+	.search {
+		width: 600px;
+		overflow: hidden;
+		position: relative;
+		border: 1px solid rgba(0, 0, 0, 1);
+		margin-right: 20px;
+		.search-icon{
+			width: 36px;
+			height: 36px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+	}
+	.search-input {
+		height: 56px;
+		border: 0;
+		padding-left: 20px;
+		padding-right: 50px;
+		font-size: 18px;
+		color: #333;
+	}
+}
+// a连接
+.link-all {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 @keyframes upDown {
 	from {

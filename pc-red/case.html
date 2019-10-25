@@ -8,7 +8,7 @@
 		<meta name="format-detection" content="telephone=no" />
 		<link rel="stylesheet" type="text/css" href="css/layout.css?v=1.0.0">
 		<link rel="stylesheet" type="text/css" href="css/common.css">
-			<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=eu0WedayzrZKPfvQAFxoVqF9zazdwbxg&s=1">
+		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=eu0WedayzrZKPfvQAFxoVqF9zazdwbxg&s=1">
 		</script>
 		<style type="text/css">
 		</style>
@@ -74,54 +74,37 @@
 						<div class="content">
 							<div class="search-box">
 								<div class="search">
-									<input class="search-input" type="text" placeholder="在这里搜索你想要的车型">
+									<input id="searchInput" class="search-input" type="text" placeholder="在这里搜索你想要的车型" />
+									<img id="searchButton" class="search-icon" src="images/search-icon.png" alt="">
 								</div>
-								<span class="hot">
-									热门搜索：GL8 音响升级、MPV全车隔音、音响隔音改装 …
-								</span>
+								<span class="hot">热门搜索：GL8 音响升级、MPV全车隔音、音响隔音改装 …</span>
 							</div>
 							<div class="filter-box">
 								<div class="filter">
-									<span class="filter-txt">
-										改装类型：
-									</span>
-									<ul class="filter-w">
-										<li class="filter-item">
-											不限
-										</li>
-										<li class="filter-item active">
-											音响
-										</li>
-										<li class="filter-item">
-											隔音
-										</li>
+									<span class="filter-txt">改装类型：</span>
+									<ul class="filter-w" id="filter01">
+										<li class="filter-item active">不限</li>
+										<li class="filter-item">音响</li>
+										<li class="filter-item">隔音</li>
 									</ul>
 								</div>
 								<div class="filter">
-									<span class="filter-txt">
-										改装车系：
-									</span>
-									<ul class="filter-w">
-										<li class="filter-item">不限</li>
-										<li class="filter-item">
-											音响
-										</li>
-										<li class="filter-item">
-											隔音
-										</li>
+									<span class="filter-txt">改装车系：</span>
+									<ul class="filter-w" id="filter02">
+										<li class="filter-item active">不限</li>
+										<li class="filter-item">音响</li>
+										<li class="filter-item">隔音</li>
 									</ul>
 								</div>
 								<div class="filter">
-									<span class="filter-txt">
-										汽车品牌：
-									</span>
+									<span class="filter-txt">汽车品牌：</span>
 									<ul class="filter-w brand-box" id="brandBox">
-										<span class="filter-item active">不限</span>
+										<li class="filter-item  active">不限</li>
 										<li class="filter-item filter-item-brand">
 											<img class="brand-icon" src="images/category/1.jpg" alt="" />
 											奥迪
 										</li>
-										<li class="filter-item filter-item-brand active">
+										<li class="filter-item filter-item-brand">
 											<img class="brand-icon" src="images/category/2.jpg" alt="" />
 											奥迪1
 										</li>
@@ -216,7 +199,7 @@
 											<img class="brand-icon" src="images/category/3.jpg" alt="" />
 											奥迪11
 										</li>
-									
+							
 										</li>
 										<li class="filter-item filter-item-brand">
 											<img class="brand-icon" src="images/category/3.jpg" alt="" />
@@ -282,7 +265,6 @@
 												<<</span> </p> <!-- <li class="filter-item">不限</li> -->
 									</ul>
 								</div>
-							</div>
 							<ul class="case-box clear">
 								<li class="case-item">
 									<a href="" class="nav-all">
@@ -333,7 +315,7 @@
 							</ul>
 							<!-- 没有结果 -->
 							<div class="no-result">
-								<img class="img" src="images/noresult.png" >
+								<img class="img" src="images/noresult.png">
 								<p class="tip">
 									暂无搜索结果！
 								</p>
@@ -348,10 +330,10 @@
 								<span class="hot-t-en">HOT</span>
 								<span class="hot-t-cn">热门改装案例</span>
 							</span>
-							<span class="r">
+							<a class="r" href="">
 								<span class="">更多案例</span>
-								<span class="arrow">></span>
-							</span>
+								<img class="arrow" src="images/arrow-more.png" alt="">
+							</a>
 						</div>
 						<div class="hot-bd">
 							<span class="btn-prev" id="left">
@@ -360,43 +342,31 @@
 							<span class="btn-next" id="right"><img class="btn-icon" src="images/right.png" alt="" /></span>
 							<ul class="clear" id="hot">
 								<li class="hot-item">
-									<a href="" class="nav-all">
+									<a href="detail.html" class="nav-all">
 										<img class="img" src="images/case12.jpg" alt="" />
 										<p class="title">宝马320汽车音响改装</p>
 									</a>
 								</li>
 								<li class="hot-item">
-									<a href="" class="nav-all">
+									<a href="detail.html" class="nav-all">
 										<img class="img" src="images/case12.jpg" alt="" />
 										<p class="title">宝马320汽车音响改装</p>
 									</a>
 								</li>
 								<li class="hot-item">
-									<a href="" class="nav-all">
+									<a href="detail.html" class="nav-all">
 										<img class="img" src="images/case12.jpg" alt="" />
 										<p class="title">宝马320汽车音响改装</p>
 									</a>
 								</li>
 								<li class="hot-item">
-									<a href="" class="nav-all">
+									<a href="detail.html" class="nav-all">
 										<img class="img" src="images/case12.jpg" alt="" />
 										<p class="title">宝马320汽车音响改装</p>
 									</a>
 								</li>
 								<li class="hot-item">
-									<a href="" class="nav-all">
-										<img class="img" src="images/case12.jpg" alt="" />
-										<p class="title">宝马320汽车音响改装</p>
-									</a>
-								</li>
-								<li class="hot-item">
-									<a href="" class="nav-all">
-										<img class="img" src="images/case12.jpg" alt="" />
-										<p class="title">宝马320汽车音响改装</p>
-									</a>
-								</li>
-								<li class="hot-item">
-									<a href="" class="nav-all">
+									<a href="detail.html" class="nav-all">
 										<img class="img" src="images/case12.jpg" alt="" />
 										<p class="title">宝马320汽车音响改装</p>
 									</a>
@@ -413,7 +383,7 @@
 				<p class="tip tip1">如您有任何疑问或建议，请通过以下方式与我们联系或者拨打</p>
 				<p class="tel-box"><span class="tel">0757-22612281 / 139 2919 7901</span></p>
 				<p class="tip tip2">我们将尽快与您取得联系</p>
-				<span class="btn-contact">在线留言</span>
+				<a href="" class="btn-contact">在线留言</a>
 				<ul class="code-box">
 					<li class="code-item">
 						<img class="qrcode" src="images/Qrcode.jpg" alt="" />
@@ -450,7 +420,7 @@
 								<img class="i-icon" src="images/clock.png" alt="" />
 								<span class="i-title">营业时间:</span>
 								<span>周一至周日（09:00-22:00）</span>
-							</li><strong></strong>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -458,6 +428,7 @@
 			<div class="copyright">版权所有© 广州名膜汇贸易有限公司 粤ICP备17005634号</div>
 		</footer>
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/filter.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			var length = document.getElementById('hot').children.length;
 			var hot = document.getElementById('hot')

@@ -70,7 +70,7 @@
 					<div class="content">
 						<div class="left">
 							<div class="date">2019.09.19</div>
-							<div class="article">
+							<div class="article edit_textBox">
 								<div class="title">本田CRV汽车音响改装丨ATI精巧6.2S二分频套 装喇叭+ATI精巧6.0同轴喇叭</div>
 								<img src="images/ConstructionQuality3.jpg" alt="" class="img" />
 								<p class="txt">
@@ -97,16 +97,18 @@
 							</div>
 							<div class="case-box">
 								<div class="case-hd">
-									<ul class="c-box">
+									<ul class="c-box" id="caseNav">
 										<li class="item active">最新改装案例</li>
 										<li class="item">最热门改装案例</li>
 									</ul>
-									<span class="more">更多>></span>
+									<a class="more" href="">更多>></a>
 								</div>
 								<ul class="case-bd">
-									<li class="item" v-for="i in 5">
-										<img class="i-img" src="images/case6.jpg" alt="" />
-										<span class="i-title">飞度GK5尼诺帕克NP90音 响改装案例</span>
+									<li class="item">
+										<a href="detail.html" class="link-all">
+											<img class="i-img" src="images/case6.jpg" alt="" />
+											<span class="i-title">飞度GK5尼诺帕克NP90音 响改装案例</span>
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -121,10 +123,10 @@
 								<span class="hot-t-en">HOT</span>
 								<span class="hot-t-cn">热门改装案例</span>
 							</span>
-							<span class="r">
+							<a class="r" href="">
 								<span class="">更多案例</span>
-								<span class="arrow">></span>
-							</span>
+								<img class="arrow" src="images/arrow-more.png" alt="">
+							</a>
 						</div>
 						<div class="hot-bd">
 							<span class="btn-prev" id="left">
@@ -133,36 +135,34 @@
 							<span class="btn-next" id="right"><img class="btn-icon" src="images/right.png" alt="" /></span>
 							<ul class="clear" id="hot">
 								<li class="hot-item">
-									<img class="img" src="images/case12.jpg" alt="" />
-									<p class="title">宝马320汽车音响改装</p>
+									<a href="detail.html" class="nav-all">
+										<img class="img" src="images/case12.jpg" alt="" />
+										<p class="title">宝马320汽车音响改装</p>
+									</a>
 								</li>
 								<li class="hot-item">
-									<img class="img" src="images/case12.jpg" alt="" />
-									<p class="title">宝马320汽车音响改装</p>
+									<a href="detail.html" class="nav-all">
+										<img class="img" src="images/case12.jpg" alt="" />
+										<p class="title">宝马320汽车音响改装</p>
+									</a>
 								</li>
 								<li class="hot-item">
-									<img class="img" src="images/case12.jpg" alt="" />
-									<p class="title">宝马320汽车音响改装</p>
+									<a href="detail.html" class="nav-all">
+										<img class="img" src="images/case12.jpg" alt="" />
+										<p class="title">宝马320汽车音响改装</p>
+									</a>
 								</li>
 								<li class="hot-item">
-									<img class="img" src="images/case12.jpg" alt="" />
-									<p class="title">宝马320汽车音响改装</p>
+									<a href="detail.html" class="nav-all">
+										<img class="img" src="images/case12.jpg" alt="" />
+										<p class="title">宝马320汽车音响改装</p>
+									</a>
 								</li>
 								<li class="hot-item">
-									<img class="img" src="images/case12.jpg" alt="" />
-									<p class="title">宝马320汽车音响改装</p>
-								</li>
-								<li class="hot-item">
-									<img class="img" src="images/case12.jpg" alt="" />
-									<p class="title">宝马320汽车音响改装</p>
-								</li>
-								<li class="hot-item">
-									<img class="img" src="images/case12.jpg" alt="" />
-									<p class="title">宝马320汽车音响改装</p>
-								</li>
-								<li class="hot-item">
-									<img class="img" src="images/case12.jpg" alt="" />
-									<p class="title">宝马320汽车音响改装</p>
+									<a href="detail.html" class="nav-all">
+										<img class="img" src="images/case12.jpg" alt="" />
+										<p class="title">宝马320汽车音响改装</p>
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -176,7 +176,7 @@
 				<p class="tip tip1">如您有任何疑问或建议，请通过以下方式与我们联系或者拨打</p>
 				<p class="tel-box"><span class="tel">0757-22612281 / 139 2919 7901</span></p>
 				<p class="tip tip2">我们将尽快与您取得联系</p>
-				<span class="btn-contact">在线留言</span>
+				<a href="" class="btn-contact">在线留言</a>
 				<ul class="code-box">
 					<li class="code-item">
 						<img class="qrcode" src="images/Qrcode.jpg" alt="" />
@@ -213,7 +213,7 @@
 								<img class="i-icon" src="images/clock.png" alt="" />
 								<span class="i-title">营业时间:</span>
 								<span>周一至周日（09:00-22:00）</span>
-							</li><strong></strong>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -228,12 +228,25 @@
 				new Date() / 3600000);
 		</script>
 		<script type="text/javascript">
+			// 右侧 最新推荐...导航栏
+			var caseNav = document.getElementById('caseNav')
+			caseNavLists = caseNav.children
+			for(let i=0;i<caseNavLists.length;i++){
+				caseNavLists[i].onclick = function(){
+					for(let j=0;j<caseNavLists.length;j++){
+						caseNavLists[j].classList.remove('active')
+					}
+					caseNavLists[i].classList.add('active')
+				}
+			}
+			
+			
 			var length = document.getElementById('hot').children.length;
 			var hot = document.getElementById('hot')
 			var left = document.getElementById('left')
 			var right = document.getElementById('right')
 			right.style.display = 'none'
-			if (length < 5) {
+			if (length <= 5) {
 				left.style.display = 'none'
 			} else {
 				left.style.display = 'flex'

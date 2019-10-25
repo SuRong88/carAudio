@@ -35,6 +35,7 @@ dd {
 body {
   color: #555;
   -webkit-font-smoothing: subpixel-antialiased;
+  webkit-tap-highlight-color: transparent;
 }
 table {
   border-collapse: collapse;

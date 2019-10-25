@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/common.css">
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=eu0WedayzrZKPfvQAFxoVqF9zazdwbxg&s=1">
+			<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=eu0WedayzrZKPfvQAFxoVqF9zazdwbxg&s=1">
 		</script>
 		<style type="text/css">
 		</style>
@@ -54,14 +54,14 @@
 						</p>
 					</div>
 
-					<div class="more-box" id="moreBtn">
+					<div class="more-box">
 						<div class="more">
 							<img class="arrow-down" src="images/about/down.png" alt="" />
 							<p class="more-txt">向下滑动 了解更多</p>
 						</div>
 						<img class="mul01" src="images/about/mul01.png" alt="" />
 					</div>
-					<img class="banner01-img" id="bannerImg01" src="images/about/banner2.jpg" alt="" />
+					<img class="banner01-img" src="images/about/banner2.jpg" alt="" />
 				</div>
 
 				<div class="banner02">
@@ -270,10 +270,10 @@
 								<span class="hot-t-en">HOT</span>
 								<span class="hot-t-cn">热门改装案例</span>
 							</span>
-							<span class="r">
+							<a href="" class="r">
 								<span class="">更多案例</span>
-								<span class="arrow">></span>
-							</span>
+								<img class="arrow" src="images/arrow-more.png" alt="">
+							</a>
 						</div>
 						<div class="hot-bd">
 							<span class="btn-prev" id="left">
@@ -311,19 +311,6 @@
 										<p class="title">宝马320汽车音响改装</p>
 									</a>
 								</li>
-								<li class="hot-item">
-									<a href="" class="nav-all">
-										<img class="img" src="images/case12.jpg" alt="" />
-										<p class="title">宝马320汽车音响改装</p>
-									</a>
-								</li>
-
-								<li class="hot-item">
-									<a href="" class="nav-all">
-										<img class="img" src="images/case12.jpg" alt="" />
-										<p class="title">宝马320汽车音响改装</p>
-									</a>
-								</li>
 							</ul>
 						</div>
 					</div>
@@ -336,7 +323,7 @@
 				<p class="tip tip1">如您有任何疑问或建议，请通过以下方式与我们联系或者拨打</p>
 				<p class="tel-box"><span class="tel">0757-22612281 / 139 2919 7901</span></p>
 				<p class="tip tip2">我们将尽快与您取得联系</p>
-				<span class="btn-contact">在线留言</span>
+				<a href="" class="btn-contact">在线留言</a>
 				<ul class="code-box">
 					<li class="code-item">
 						<img class="qrcode" src="images/Qrcode.jpg" alt="" />
@@ -373,7 +360,7 @@
 								<img class="i-icon" src="images/clock.png" alt="" />
 								<span class="i-title">营业时间:</span>
 								<span>周一至周日（09:00-22:00）</span>
-							</li><strong></strong>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -390,14 +377,13 @@
 			var navbar = document.getElementById('navbar')
 			var height2 = navbar.offsetHeight
 			var body = document.body
-			var bannerImg01 =  document.getElementById('bannerImg01')
 			window.onscroll = function() {
 				if(document.documentElement.scrollTop>50){
 					console.log(document.documentElement.scrollTop)
 					banner.style.marginTop = -height+height2+'px'
 					navbar.style.position = 'fixed';
 					navbar.style.paddingTop = '14px'
-					bannerImg01.style.marginTop = '100px'
+					body.style.paddingTop = navbar.offsetHeight + 'px'
 				} 
 			else{
 					banner.style.marginTop = '0px'
