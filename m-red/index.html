@@ -79,7 +79,7 @@
 		</div>
 		<ul class="menu">
 			<li class="menu-item">
-				<a class="nav-a-all" href="">
+				<a class="nav-a-all" href="about.html">
 					<img class="img" src="images/m/about.png" alt="">
 					<span class="txt">
 						关于我们
@@ -95,7 +95,7 @@
 				</a>
 			</li>
 			<li class="menu-item">
-				<a class="nav-a-all" href="">
+				<a class="nav-a-all" href="news.html">
 					<img class="img" src="images/m/activity.png" alt="">
 					<span class="txt">
 						本月活动
@@ -111,7 +111,7 @@
 				</a>
 			</li>
 			<li class="menu-item">
-				<a class="nav-a-all" href="">
+				<a class="nav-a-all" href="case.html">
 					<img class="img" src="images/m/trumpet.png" alt="">
 					<span class="txt">
 						音响改装
@@ -119,7 +119,7 @@
 				</a>
 			</li>
 			<li class="menu-item">
-				<a class="nav-a-all" href="">
+				<a class="nav-a-all" href="tm-case.html">
 					<img class="img" src="images/m/car.png" alt="">
 					<span class="txt">
 						汽车贴膜
@@ -191,7 +191,7 @@
 											</div>
 										</div>
 									</div>
-									
+
 								</ul>
 							</div>
 						</div>
@@ -204,7 +204,10 @@
 						<h1 class="title-cn">改装案例</h1>
 						<div class="content">
 							<div class="search-box">
-								<div class="search"><input class="search-input" type="text" placeholder="在这里搜索你想要的车型" /></div>
+								<div class="search">
+									<input class="search-input" id="searchInput" type="text" placeholder="在这里搜索你想要的车型" />
+									<img class="search-icon" id="searchBtn" src="images/search-icon.png" alt="">
+								</div>
 								<span id="filterBtn" class="filter-box-m">
 									筛选
 									<img class="filter-icon" src="images/m/filter.png" alt="">
@@ -216,7 +219,7 @@
 									<div class="filter-c">
 										<div class="filter">
 											<span class="filter-txt">改装类型：</span>
-											<ul class="filter-w clear">
+											<ul class="filter-w clear" id="filter01">
 												<li class="filter-item active">不限</li>
 												<li class="filter-item">音响</li>
 												<li class="filter-item">隔音</li>
@@ -224,7 +227,7 @@
 										</div>
 										<div class="filter">
 											<span class="filter-txt">改装车系：</span>
-											<ul class="filter-w clear">
+											<ul class="filter-w clear" id="filter02">
 												<li class="filter-item active">不限</li>
 												<li class="filter-item">音响</li>
 												<li class="filter-item">隔音</li>
@@ -232,97 +235,73 @@
 										</div>
 										<div class="filter">
 											<span class="filter-txt">汽车品牌：</span>
-											<ul class="filter-w clear">
+											<ul class="filter-w clear" id="brandBox">
 												<li class="filter-item active">不限</li>
+												<li class="filter-item">宝马</li>
+												<li class="filter-item">玛莎拉蒂</li>
+												<li class="filter-item">法拉利</li>
 												<li class="filter-item">品牌</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
 												<li class="filter-item">品牌</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
 												<li class="filter-item">品牌</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
 												<li class="filter-item">品牌</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
 												<li class="filter-item">品牌</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
 												<li class="filter-item">品牌</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
 												<li class="filter-item">品牌</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
-												<li class="filter-item">牌限</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
+												<li class="filter-item">品牌</li>
 											</ul>
 										</div>
 									</div>
 									<div class="btn-box">
-										<span class="btn-reset">重置</span>
-										<span class="btn-confirm">确定</span>
+										<span class="btn-reset" id="resetBtn">重置</span>
+										<span class="btn-confirm" id="confirmBtn">确定</span>
 									</div>
 								</div>
 
 							</div>
 							<ul class="case-box clear">
 								<li class="case-item">
-									<a class="nav-a-all" href="">
+									<a class="nav-a-all" href="detail.html">
 										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
 										<p class="case-item-title">奥迪XXX汽车音响改装</p>
 									</a>
 								</li>
 								<li class="case-item">
-									<a class="nav-a-all" href="">
+									<a class="nav-a-all" href="detail.html">
 										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
 										<p class="case-item-title">奥迪XXX汽车音响改装</p>
 									</a>
 								</li>
 								<li class="case-item">
-									<a class="nav-a-all" href="">
+									<a class="nav-a-all" href="detail.html">
 										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
 										<p class="case-item-title">奥迪XXX汽车音响改装</p>
 									</a>
 								</li>
 								<li class="case-item">
-									<a class="nav-a-all" href="">
+									<a class="nav-a-all" href="detail.html">
 										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
 										<p class="case-item-title">奥迪XXX汽车音响改装</p>
 									</a>
 								</li>
 								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
+									<a class="nav-a-all" href="detail.html">
 										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
 										<p class="case-item-title">奥迪XXX汽车音响改装</p>
 									</a>
@@ -354,7 +333,9 @@
 		<!-- 联系留言微信等 -->
 		<footer class="footer">
 			<div class="call">
-				<p class="tip tip1">如您有任何疑问或建议，请通过以下方式与我们联系或者拨打</p>
+				<p class="tip tip1">如您有任何疑问或建议，
+					<br>
+					请通过以下方式与我们联系或者拨打</p>
 				<p class="tel-box"><span class="tel">0757-22612281 / 139 2919 7901</span></p>
 				<p class="tip tip2">我们将尽快与您取得联系</p>
 				<ul class="code-box">
@@ -408,6 +389,7 @@
 			</span>
 		</a>
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/filter.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			/* 轮播 */
 			var mySwiper01 = new Swiper('#swiper01', {
@@ -427,11 +409,7 @@
 			})
 			var mySwiper02 = new Swiper('#swiper02', {
 				loop: true,
-				autoplay: {
-					delay: 4000,
-					stopOnLastSlide: false,
-					disableOnInteraction: false,
-				},
+				autoplay: false,
 				slidesPerView: 3,
 				slidesPerGroup: 3,
 				loopFillGroupWithBlank: true,
@@ -447,25 +425,13 @@
 					prevEl: '#left'
 				}
 			})
-			
+
 			// 服务端渲染 施工质量导航栏
-			var titleArr = ['导航1','导航2','导航3']
-			var  qualityLists = document.getElementById('swiperP02').children
+			var titleArr = ['导航1', '导航2', '导航3']
+			var qualityLists = document.getElementById('swiperP02').children
 			for (let i = 0; i < titleArr.length; i++) {
 				qualityLists[i].innerHTML = titleArr[i]
 			}
-
-
-			// 筛选条件(注意不要与header里面的元素id冲突  open close )
-			var filterBtn = document.getElementById('filterBtn')
-			var closeBtn = document.getElementById('closeBtn')
-			var filterMask = document.getElementById('filterMask')
-			filterBtn.addEventListener('click', function() {
-				filterMask.style.display = 'block'
-			})
-			closeBtn.addEventListener('click', function() {
-				filterMask.style.display = 'none'
-			})
 		</script>
 	</body>
 </html>

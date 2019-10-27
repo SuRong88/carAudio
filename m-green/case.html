@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="format-detection" content="telephone=no" />
-		<meta http-equiv="x-rim-auto-match" content="none"> 
+		<meta http-equiv="x-rim-auto-match" content="none">
 		<link rel="stylesheet" type="text/css" href="css/layout.css?v=1.0.0">
 		<link rel="stylesheet" type="text/css" href="css/common.css">
 		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=eu0WedayzrZKPfvQAFxoVqF9zazdwbxg&s=1">
@@ -87,7 +87,10 @@
 					<div class="wrapper">
 						<div class="content">
 							<div class="search-box">
-								<div class="search"><input class="search-input" type="text" placeholder="在这里搜索你想要的车型" /></div>
+								<div class="search">
+									<input class="search-input" id="searchInput" type="text" placeholder="在这里搜索你想要的车型" />
+									<img class="search-icon" id="searchBtn" src="images/search-icon.png" alt="">
+								</div>
 								<span id="filterBtn" class="filter-box-m">
 									筛选
 									<img class="filter-icon" src="images/m/filter.png" alt="">
@@ -99,7 +102,7 @@
 									<div class="filter-c">
 										<div class="filter">
 											<span class="filter-txt">改装类型：</span>
-											<ul class="filter-w clear">
+											<ul class="filter-w clear" id="filter01">
 												<li class="filter-item active">不限</li>
 												<li class="filter-item">音响</li>
 												<li class="filter-item">隔音</li>
@@ -107,7 +110,7 @@
 										</div>
 										<div class="filter">
 											<span class="filter-txt">改装车系：</span>
-											<ul class="filter-w clear">
+											<ul class="filter-w clear" id="filter02">
 												<li class="filter-item active">不限</li>
 												<li class="filter-item">音响</li>
 												<li class="filter-item">隔音</li>
@@ -115,7 +118,7 @@
 										</div>
 										<div class="filter">
 											<span class="filter-txt">汽车品牌：</span>
-											<ul class="filter-w clear">
+											<ul class="filter-w clear" id="brandBox">
 												<li class="filter-item active">不限</li>
 												<li class="filter-item">品牌</li>
 												<li class="filter-item">牌限</li>
@@ -149,205 +152,169 @@
 										</div>
 									</div>
 									<div class="btn-box">
-										<span class="btn-reset">重置</span>
-										<span class="btn-confirm">确定</span>
+										<span class="btn-reset" id="resetBtn">重置</span>
+										<span class="btn-confirm" id="confirmBtn">确定</span>
 									</div>
 								</div>
-
-							</div>
-							<ul class="case-box clear">
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-								<li class="case-item">
-									<a class="nav-a-all" href="">
-										<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
-										<p class="case-item-title">奥迪XXX汽车音响改装</p>
-									</a>
-								</li>
-							</ul>
-							<ul class="pagination">
-								<li><a href="" class="nav-a-all">上一页</a></li>
-								<li class="current">
-									<a href="" class="nav-a-all">
-										01</a>
-								</li>
-								<li> <a href="" class="nav-a-all">02</a></li>
-								<li>
-									<a href="" class="nav-a-all">03</a></li>
-								<li>
-									<a href="" class="nav-a-all">04</a></li>
-								<li>
-									<a href="" class="nav-a-all">05</a></li>
-								<li>
-									<a href="" class="nav-a-all">下一页</a></li>
-							</ul>
-							<!-- 没有结果 -->
-							<div class="no-result">
-								<img class="img" src="images/m/noresult.png" >
-								<p class="tip">
-									暂无搜索结果！
-								</p>
+								</div>
+								<ul class="case-box clear">
+									<li class="case-item">
+										<a class="nav-a-all" href="detail.html">
+											<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
+											<p class="case-item-title">奥迪XXX汽车音响改装</p>
+										</a>
+									</li>
+									<li class="case-item">
+										<a class="nav-a-all" href="detail.html">
+											<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
+											<p class="case-item-title">奥迪XXX汽车音响改装</p>
+										</a>
+									</li>
+									<li class="case-item">
+										<a class="nav-a-all" href="detail.html">
+											<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
+											<p class="case-item-title">奥迪XXX汽车音响改装</p>
+										</a>
+									</li>
+									<li class="case-item">
+										<a class="nav-a-all" href="detail.html">
+											<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
+											<p class="case-item-title">奥迪XXX汽车音响改装</p>
+										</a>
+									</li>
+									<li class="case-item">
+										<a class="nav-a-all" href="detail.html">
+											<img class="case-item-img" src="images/ConstructionQuality1.jpg" alt="" />
+											<p class="case-item-title">奥迪XXX汽车音响改装</p>
+										</a>
+									</li>
+								</ul>
+								<ul class="pagination">
+									<li><a href="" class="nav-a-all">上一页</a></li>
+									<li class="current">
+										<a href="" class="nav-a-all">
+											01</a>
+									</li>
+									<li> <a href="" class="nav-a-all">02</a></li>
+									<li>
+										<a href="" class="nav-a-all">03</a></li>
+									<li>
+										<a href="" class="nav-a-all">04</a></li>
+									<li>
+										<a href="" class="nav-a-all">05</a></li>
+									<li>
+										<a href="" class="nav-a-all">下一页</a></li>
+								</ul>
+								<!-- 没有结果 -->
+								<div class="no-result">
+									<img class="img" src="images/m/noresult.png">
+									<p class="tip">
+										暂无搜索结果！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="hot-box">
-					<div class="hot-title">
-						<span class="line"></span>
-						<span class="en">
-							HOT
-						</span>
-						<span class="cn">
-							热门推荐
-						</span>
-						<span class="line"></span>
+					<div class="hot-box">
+						<div class="hot-title">
+							<span class="line"></span>
+							<span class="en">
+								HOT
+							</span>
+							<span class="cn">
+								热门推荐
+							</span>
+							<span class="line"></span>
+						</div>
+						<ul class="hot-w">
+							<li class="hot-item">
+								<a href="" class="nav-a-all">
+									<img class="img" src="images/about/case2.jpg" alt="">
+									<div class="title">
+										飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例
+									</div>
+								</a>
+							</li>
+							<li class="hot-item">
+								<a href="" class="nav-a-all">
+									<img class="img" src="images/about/case2.jpg" alt="">
+									<div class="title">
+										飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例
+									</div>
+								</a>
+							</li>
+							<li class="hot-item">
+								<a href="" class="nav-a-all">
+									<img class="img" src="images/about/case2.jpg" alt="">
+									<div class="title">
+										飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例
+									</div>
+								</a>
+							</li>
+						</ul>
+						<a href="" class="view-more">查看更多</a>
 					</div>
-					<ul class="hot-w">
-						<li class="hot-item">
-							<a href="" class="nav-a-all">
-								<img class="img" src="images/about/case2.jpg" alt="">
-								<div class="title">
-									飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例
-								</div>
-							</a>
-						</li>
-						<li class="hot-item">
-							<a href="" class="nav-a-all">
-								<img class="img" src="images/about/case2.jpg" alt="">
-								<div class="title">
-									飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例
-								</div>
-							</a>
-						</li>
-						<li class="hot-item">
-							<a href="" class="nav-a-all">
-								<img class="img" src="images/about/case2.jpg" alt="">
-								<div class="title">
-									飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例飞度GK5尼诺帕克NP90音响改 装案例
-								</div>
-							</a>
-						</li>
-					</ul>
-					<a href="" class="view-more">查看更多</a>
-				</div>
 
-			</div>
-		</div>
-		<!-- 联系留言微信等 -->
-		<footer class="footer">
-			<div class="call">
-				<p class="tip tip1">如您有任何疑问或建议，请通过以下方式与我们联系或者拨打</p>
-				<p class="tel-box"><span class="tel">0757-22612281 / 139 2919 7901</span></p>
-				<p class="tip tip2">我们将尽快与您取得联系</p>
-				<ul class="code-box">
-					<li class="code-item">
-						<img class="qrcode" src="images/Qrcode.jpg" alt="" />
-						<p class="code-name">
-							音响码头微信公众号
-						</p>
-					</li>
-					<li class="code-item">
-						<img class="qrcode" src="images/Qrcode.jpg" alt="" />
-						<p class="code-name">
-							音响码头微信公众号
-							<br>
-							13929197901
-						</p>
-					</li>
-				</ul>
-			</div>
-			<div class="map-box">
-				<div class="map" id="map" style=""></div>
-				<div class="contact-box ">
-					<h1 class="title">CONTACT</h1>
-					<h2 class="name">音响码头汽车音响改装佛山总部</h2>
-					<ul class="details">
-						<li class="item">
-							<img class="i-icon" src="images/address.png" alt="" />
-							<span class="i-title">地址:</span>
-							<span>顺德大良红岗工业区展业路2号A</span>
-						</li>
-						<li class="item">
-							<img class="i-icon" src="images/phone.png" alt="" />
-							<span class="i-title">手机:</span>
-							<span>139 2480 8629</span>
-						</li>
-						<li class="item">
-							<img class="i-icon" src="images/clock.png" alt="" />
-							<span class="i-title">营业时间:</span>
-							<span>周一至周日（09:00-22:00）</span>
-						</li><strong></strong>
-					</ul>
 				</div>
 			</div>
-			<div class="copyright">版权所有© 广州名膜汇贸易有限公司 粤ICP备17005634号</div>
-		</footer>
+			<!-- 联系留言微信等 -->
+			<footer class="footer">
+				<div class="call">
+					<p class="tip tip1">如您有任何疑问或建议，请通过以下方式与我们联系或者拨打</p>
+					<p class="tel-box"><span class="tel">0757-22612281 / 139 2919 7901</span></p>
+					<p class="tip tip2">我们将尽快与您取得联系</p>
+					<ul class="code-box">
+						<li class="code-item">
+							<img class="qrcode" src="images/Qrcode.jpg" alt="" />
+							<p class="code-name">
+								音响码头微信公众号
+							</p>
+						</li>
+						<li class="code-item">
+							<img class="qrcode" src="images/Qrcode.jpg" alt="" />
+							<p class="code-name">
+								音响码头微信公众号
+								<br>
+								13929197901
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="map-box">
+					<div class="map" id="map" style=""></div>
+					<div class="contact-box ">
+						<h1 class="title">CONTACT</h1>
+						<h2 class="name">音响码头汽车音响改装佛山总部</h2>
+						<ul class="details">
+							<li class="item">
+								<img class="i-icon" src="images/address.png" alt="" />
+								<span class="i-title">地址:</span>
+								<span>顺德大良红岗工业区展业路2号A</span>
+							</li>
+							<li class="item">
+								<img class="i-icon" src="images/phone.png" alt="" />
+								<span class="i-title">手机:</span>
+								<span>139 2480 8629</span>
+							</li>
+							<li class="item">
+								<img class="i-icon" src="images/clock.png" alt="" />
+								<span class="i-title">营业时间:</span>
+								<span>周一至周日（09:00-22:00）</span>
+							</li><strong></strong>
+						</ul>
+					</div>
+				</div>
+				<div class="copyright">版权所有© 广州名膜汇贸易有限公司 粤ICP备17005634号</div>
+			</footer>
 
-		<a href="tel:15015050896" class="service">
-			<img class="tel-icon" src="images/m/tel.png" alt="">
-			<span  class="txt">
-				电话咨询音响码头
-			</span>
-		</a>
-		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			// 筛选条件(注意不要与header里面的元素id冲突  open close )
-			var filterBtn = document.getElementById('filterBtn')
-			var closeBtn = document.getElementById('closeBtn')
-			var filterMask = document.getElementById('filterMask')
-			filterBtn.addEventListener('click', function() {
-				filterMask.style.display = 'block'
-			})
-			closeBtn.addEventListener('click', function() {
-				filterMask.style.display = 'none'
-			})
-		</script>
+			<a href="tel:15015050896" class="service">
+				<img class="tel-icon" src="images/m/tel.png" alt="">
+				<span class="txt">
+					电话咨询音响码头
+				</span>
+			</a>
+			<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/filter.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

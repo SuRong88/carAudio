@@ -321,8 +321,10 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 4rem 0;
+  background-color: #f7f7f7;
 }
 .footer .call .tip {
+  text-align: center;
   font-size: 1.2rem;
   font-family: PingFang SC;
   font-weight: 400;
@@ -331,14 +333,13 @@ body {
 }
 .footer .call .tel-box .tel {
   display: block;
-  font-size: 2.1rem;
-  line-height: 1.8rem;
+  font-size: 2.4rem;
+  line-height: 1;
   font-weight: bold;
-  color: #d10223;
-  margin: 1rem auto;
+  color: #D10223;
+  margin: 0.7rem auto;
   font-family: 'Rajdhani';
   text-align: center;
-  line-height: 1.4;
 }
 .footer .call .code-box .code-item {
   margin-top: 3rem;
@@ -397,25 +398,28 @@ body {
   font-family: Rajdhani;
 }
 .footer .map-box .contact-box .title {
+  line-height: 1;
   font-size: 2.4rem;
   font-weight: bold;
-  color: #d10223;
+  color: #D10223;
+  margin-bottom: 0.7rem;
 }
 .footer .map-box .contact-box .name {
   font-size: 1.8rem;
   font-weight: bold;
   color: #333333;
-  line-height: 60px;
 }
 .footer .map-box .contact-box .details {
   border-top: 1px solid #d2d2d2;
-  padding-top: 2rem;
-  margin-top: 2rem;
+  padding-top: 1.7rem;
+  margin-top: 1.5rem;
 }
 .footer .map-box .contact-box .item {
   font-size: 1.2rem;
   color: #333;
-  line-height: 3.6rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
 }
 .footer .map-box .contact-box .i-icon {
   display: inline-block;
@@ -423,7 +427,9 @@ body {
   vertical-align: middle;
 }
 .footer .map-box .contact-box .i-title {
-  color: #d10223;
+  color: #D10223;
+  margin-left: 0.4em;
+  margin-right: 0.8em;
 }
 .footer .copyright {
   line-height: 3.1rem;
@@ -437,7 +443,7 @@ body {
 .service {
   width: 100%;
   height: 5rem;
-  background-color: #d10223;
+  background-color: #D10223;
   font-size: 1.5rem;
   font-family: PingFang SC;
   font-weight: 400;
@@ -510,7 +516,9 @@ body {
   font-weight: 400;
   color: #999999;
   width: 8rem;
-  line-height: 3rem;
+  text-overflow: ellipsis;
+  line-height: 1;
+  padding: 0.8rem 0;
   text-align: center;
   background: #f5f5f5;
   border-radius: 0.3rem;
@@ -524,7 +532,7 @@ body {
   margin-top: 1rem;
 }
 .filter-mask .filter-item.active {
-  color: #d10223;
+  color: #D10223;
   background: #FFEDEF;
 }
 .filter-mask .filter-item.active:after {
@@ -550,7 +558,7 @@ body {
   height: 3rem;
   line-height: 2.8rem;
   text-align: center;
-  border: 1px solid #d10223;
+  border: 1px solid #D10223;
   -webkit-border-radius: 0.3rem 0 0 0.3rem;
   -moz-border-radius: 0.3rem 0 0 0.3rem;
   -ms-border-radius: 0.3rem 0 0 0.3rem;
@@ -559,7 +567,7 @@ body {
   font-size: 1.8rem;
   font-family: PingFang SC;
   font-weight: 500;
-  color: #d10223;
+  color: #D10223;
 }
 .filter-mask .btn-box .btn-confirm {
   display: block;
@@ -576,7 +584,7 @@ body {
   font-family: PingFang SC;
   font-weight: 500;
   color: #fff;
-  background-color: #d10223;
+  background-color: #D10223;
 }
 .navbar-mask {
   position: fixed;
@@ -613,7 +621,7 @@ body {
   text-align: center;
 }
 .navbar-mask .navbar .nav-item.active .a {
-  color: #d10223;
+  color: #D10223;
   font-weight: 700;
 }
 .navbar-mask .navbar .a {
@@ -683,15 +691,16 @@ body {
 .index .main .refit,
 .index .main .new {
   padding: 0 1.5rem;
-  padding-top: 4rem;
+  padding-top: 3.8rem;
 }
 .index .main .quality .title-en,
 .index .main .refit .title-en,
 .index .main .new .title-en {
+  line-height: 1;
   font-size: 2.4rem;
   font-family: Rajdhani;
   font-weight: bold;
-  color: #d10223;
+  color: #D10223;
 }
 .index .main .quality .title-cn,
 .index .main .refit .title-cn,
@@ -700,7 +709,7 @@ body {
   font-family: Source Han Sans CN;
   font-weight: 300;
   color: #000000;
-  margin: 0.6rem auto 4rem;
+  margin: 0.5rem auto 3.8rem;
 }
 .index .main .quality {
   height: 30rem;
@@ -808,13 +817,13 @@ body {
   position: relative;
 }
 .index .main .quality .swiper-pagination-bullet:hover {
-  color: #d10223;
+  color: #D10223;
 }
 .index .main .quality .swiper-pagination-bullet:last-child {
   margin-right: 0;
 }
 .index .main .quality .swiper-pagination-bullet-active {
-  color: #d10223;
+  color: #D10223;
 }
 .index .main .quality .swiper-pagination-bullet-active:after {
   content: '';
@@ -824,7 +833,7 @@ body {
   display: block;
   height: 0.2rem;
   width: 100%;
-  background: #d10223;
+  background: #D10223;
 }
 .index .main .quality .nav-item {
   flex-shrink: 0;
@@ -841,7 +850,7 @@ body {
   margin-right: 0;
 }
 .index .main .quality .nav-item.active {
-  color: #d10223;
+  color: #D10223;
 }
 .index .main .quality .nav-item.active:after {
   content: '';
@@ -851,52 +860,7 @@ body {
   display: block;
   height: 0.2rem;
   width: 100%;
-  background: #d10223;
-}
-.index .main .refit .search-box {
-  display: flex;
-  align-items: center;
-  padding: 0.2rem 0 1.5rem;
-  justify-content: space-between;
-}
-.index .main .refit .search {
-  width: 27rem;
-  overflow: hidden;
-  position: relative;
-  border: 1px solid #000000;
-  margin-right: 1rem;
-  font-size: 1.4rem;
-  font-family: PingFang SC;
-}
-.index .main .refit .search:before {
-  content: '';
-  display: block;
-  width: 2.4rem;
-  height: 2.4rem;
-  background: url(../images/search-icon.png) center center no-repeat;
-  background-size: 100% 100%;
-  position: absolute;
-  top: 50%;
-  left: 1rem;
-  margin-top: -1.2rem;
-}
-.index .main .refit .search-input {
-  height: 3rem;
-  border: 0;
-  padding-left: 4rem;
-  padding-right: 1rem;
-}
-.index .main .refit .filter-box-m {
-  font-size: 1.4rem;
-  font-family: PingFang SC;
-  font-weight: 400;
-  color: #333333;
-  display: flex;
-  flex-wrap: nowrap;
-}
-.index .main .refit .filter-icon {
-  width: 2.4rem;
-  height: 2.4rem;
+  background: #D10223;
 }
 .index .main .refit .case-box {
   display: flex;
@@ -930,14 +894,14 @@ body {
   width: 11rem;
   line-height: 3rem;
   text-align: center;
-  border: 1px solid #d10223;
+  border: 1px solid #D10223;
   font-size: 1.2rem;
   color: #333333;
   margin: 3rem auto 5rem;
   position: relative;
 }
 .index .main .refit .view-more:hover {
-  background-color: #d10223;
+  background-color: #D10223;
   color: #fff;
 }
 .index .main .refit .view-more:after {
@@ -994,14 +958,14 @@ body {
   width: 11rem;
   line-height: 3rem;
   text-align: center;
-  border: 1px solid #d10223;
+  border: 1px solid #D10223;
   font-size: 1.2rem;
   color: #333333;
   margin: 3rem auto 5rem;
   position: relative;
 }
 .index .main .new .view-more:hover {
-  background-color: #d10223;
+  background-color: #D10223;
   color: #fff;
 }
 .index .main .new .view-more:after {
@@ -1024,14 +988,14 @@ body {
   width: 11rem;
   line-height: 3rem;
   text-align: center;
-  border: 1px solid #d10223;
+  border: 1px solid #D10223;
   font-size: 1.2rem;
   color: #333333;
   margin: 3rem auto 5rem;
   position: relative;
 }
 .case .view-more:hover {
-  background-color: #d10223;
+  background-color: #D10223;
   color: #fff;
 }
 .case .view-more:after {
@@ -1045,51 +1009,6 @@ body {
   top: 50%;
   right: -1rem;
   margin-top: -0.2rem;
-}
-.case .refit .search-box {
-  display: flex;
-  align-items: center;
-  padding: 0.2rem 0 1.5rem;
-  justify-content: space-between;
-}
-.case .refit .search {
-  width: 27rem;
-  overflow: hidden;
-  position: relative;
-  border: 1px solid #000000;
-  margin-right: 1rem;
-  font-size: 1.4rem;
-  font-family: PingFang SC;
-}
-.case .refit .search:before {
-  content: '';
-  display: block;
-  width: 2.4rem;
-  height: 2.4rem;
-  background: url(../images/search-icon.png) center center no-repeat;
-  background-size: 100% 100%;
-  position: absolute;
-  top: 50%;
-  left: 1rem;
-  margin-top: -1.2rem;
-}
-.case .refit .search-input {
-  height: 3rem;
-  border: 0;
-  padding-left: 4rem;
-  padding-right: 1rem;
-}
-.case .refit .filter-box-m {
-  font-size: 1.4rem;
-  font-family: PingFang SC;
-  font-weight: 400;
-  color: #333333;
-  display: flex;
-  flex-wrap: nowrap;
-}
-.case .refit .filter-icon {
-  width: 2.4rem;
-  height: 2.4rem;
 }
 .case .refit .case-box {
   display: flex;
@@ -1126,27 +1045,32 @@ body {
   font-family: PingFang SC;
   font-weight: bold;
   color: #333333;
-  line-height: 3rem;
 }
 .detail .content .date {
+  display: block;
   font-size: 1.5rem;
   font-family: Rajdhani;
   font-weight: 400;
+  margin: 1.5rem 0 3rem;
   color: #333333;
+}
+.detail .content .article {
+  line-height: 2;
+  margin-bottom: 2rem;
 }
 .detail .view-more {
   display: block;
   width: 11rem;
   line-height: 3rem;
   text-align: center;
-  border: 1px solid #d10223;
+  border: 1px solid #D10223;
   font-size: 1.2rem;
   color: #333333;
   margin: 3rem auto 5rem;
   position: relative;
 }
 .detail .view-more:hover {
-  background-color: #d10223;
+  background-color: #D10223;
   color: #fff;
 }
 .detail .view-more:after {
@@ -1219,7 +1143,7 @@ body {
   position: relative;
 }
 .news .nav-item.active {
-  color: #d10223;
+  color: #D10223;
   font-weight: 700;
 }
 .news .nav-item.active:after {
@@ -1230,7 +1154,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: #d10223;
+  background-color: #D10223;
 }
 .news .res-item {
   width: 100%;
@@ -1261,7 +1185,7 @@ body {
   text-align: center;
 }
 .news .red {
-  background: #d10223;
+  background: #D10223;
 }
 .news .black {
   background: #b5b5b5;
@@ -1289,22 +1213,19 @@ body {
   color: #999999;
   line-height: 1.8rem;
 }
-.about .main {
-  padding: 0 1.5rem;
-}
 .about .view-more {
   display: block;
   width: 11rem;
   line-height: 3rem;
   text-align: center;
-  border: 1px solid #d10223;
+  border: 1px solid #D10223;
   font-size: 1.2rem;
   color: #333333;
   margin: 3rem auto 5rem;
   position: relative;
 }
 .about .view-more:hover {
-  background-color: #d10223;
+  background-color: #D10223;
   color: #fff;
 }
 .about .view-more:after {
@@ -1319,7 +1240,9 @@ body {
   right: -1rem;
   margin-top: -0.2rem;
 }
-.about .history .title-box,
+.about .introduce {
+  padding: 0 1.5rem;
+}
 .about .introduce .title-box,
 .about .team .title-box {
   height: 11rem;
@@ -1328,7 +1251,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.about .history .title-cn,
 .about .introduce .title-cn,
 .about .team .title-cn {
   font-size: 1.8rem;
@@ -1336,14 +1258,28 @@ body {
   font-weight: 400;
   text-align: center;
 }
-.about .history .title-en,
 .about .introduce .title-en,
 .about .team .title-en {
   font-size: 2.4rem;
   font-family: Rajdhani;
   font-weight: bold;
-  color: #d10223;
+  color: #D10223;
   text-align: center;
+}
+.about .history .title-box {
+  height: 11rem;
+  padding: 0 3rem;
+  padding-top: 3rem;
+}
+.about .history .title-cn {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.about .history .title-en {
+  font-size: 2.4rem;
+  font-family: Rajdhani;
+  font-weight: bold;
+  color: #D10223;
 }
 .about .history .more-box {
   position: relative;
@@ -1390,7 +1326,6 @@ body {
 }
 .about .history .banner01 .mini-title {
   font-size: 1.4rem;
-  font-family: PingFang SC;
   font-weight: 400;
   text-align: left;
   color: #ffffff;
@@ -1399,15 +1334,13 @@ body {
   margin: 1rem auto 2rem;
   font-size: 1.8rem;
   text-align: left;
-  font-family: PingFang SC;
   font-weight: 500;
   color: #ffffff;
 }
 .about .history .banner01 .descs {
   font-size: 1.4rem;
-  font-family: PingFang SC;
-  line-height: 1.8;
   color: #ffffff;
+  line-height: 2;
 }
 .about .history .banner02 {
   width: 100%;
@@ -1453,7 +1386,7 @@ body {
   width: 100%;
   height: 4rem;
   display: flex;
-  border-top: 2px solid #d10223;
+  border-top: 2px solid #D10223;
 }
 .about .history .banner02 .history-pagination .swiper-pagination-bullet {
   flex: 1;
@@ -1477,7 +1410,7 @@ body {
   z-index: 80;
 }
 .about .history .banner02 .history-pagination .swiper-pagination-bullet-active {
-  color: #d10223;
+  color: #D10223;
 }
 .about .history .banner02 .history-pagination .swiper-pagination-bullet-active:before {
   content: '';
@@ -1487,7 +1420,7 @@ body {
   top: -4rem;
   left: 50%;
   margin-left: -0.1rem;
-  background-image: linear-gradient(0deg, #d10223, 43%, rgba(106, 202, 255, 0) 100%);
+  background-image: linear-gradient(0deg, #D10223, 43%, rgba(106, 202, 255, 0) 100%);
   position: absolute;
 }
 .about .history .banner02 .history-pagination .swiper-pagination-bullet span.pointer {
@@ -1522,7 +1455,7 @@ body {
   height: 4px;
   border-radius: 100%;
   background: #7d7d7d;
-  border: 1px solid #d10223;
+  border: 1px solid #D10223;
   display: block;
   position: absolute;
   left: 50%;
@@ -1533,14 +1466,14 @@ body {
   z-index: 3;
 }
 .about .history .banner02 .history-pagination .swiper-pagination-bullet-active span.pointer:before {
-  background: #d10223;
+  background: #D10223;
 }
 .about .history .banner02 .history-pagination .swiper-pagination-bullet-active span.pointer:after {
   width: 4px;
   height: 4px;
   margin-left: -3px;
   margin-top: -3px;
-  background: #d10223;
+  background: #D10223;
   border: 1px solid #7d7d7d;
 }
 .about .history .banner02 .history-pagination-active {
@@ -1587,7 +1520,7 @@ body {
   margin-top: -3px;
   width: 6px;
   height: 6px;
-  background: #d10223;
+  background: #D10223;
   border-radius: 50%;
 }
 .about .history .banner02 .development {
@@ -1638,6 +1571,7 @@ body {
   text-overflow: ellipsis;
 }
 .about .team {
+  padding: 0 1.5rem;
   background: #f7f7f7;
   padding-bottom: 5rem;
 }
@@ -1651,9 +1585,9 @@ body {
   padding: 0 2rem;
 }
 .about .team .avatar {
-  width: 45%;
+  width: 48%;
   height: 22rem;
-  margin-right: 5%;
+  margin-right: 4%;
 }
 .about .team .swiper-button-prev,
 .about .team .swiper-button-next {
@@ -1678,7 +1612,8 @@ body {
   font-family: PingFang SC;
   font-weight: 400;
   color: #000000;
-  line-height: 3rem;
+  line-height: 1;
+  padding-top: 1rem;
   position: relative;
   white-space: nowrap;
   overflow: hidden;
@@ -1692,14 +1627,16 @@ body {
   display: block;
   width: 4rem;
   height: 0.4rem;
-  background: #d10223;
+  background: #D10223;
 }
 .about .team .desc {
   font-size: 1.2rem;
   font-family: PingFang SC;
   font-weight: 400;
   color: #999999;
-  line-height: 1.4;
+  line-height: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1715,6 +1652,9 @@ body {
 .about .team .awards li:last-child {
   margin-bottom: 0;
 }
+.about .hot-box {
+  padding: 0 1.5rem;
+}
 .contact .main {
   padding: 0 1.5rem;
 }
@@ -1727,7 +1667,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5rem auto;
+  margin: 4.4rem auto;
 }
 .case .hot-box .line,
 .detail .hot-box .line,
@@ -1743,7 +1683,7 @@ body {
   font-size: 2.4rem;
   font-family: Rajdhani;
   font-weight: bold;
-  color: #d10223;
+  color: #D10223;
   margin-left: 1rem;
 }
 .case .hot-box .cn,
@@ -1779,12 +1719,67 @@ body {
 .case .hot-box .hot-item .title,
 .detail .hot-box .hot-item .title,
 .about .hot-box .hot-item .title {
+  margin-top: -0.4rem;
   flex: 1;
   font-size: 1.4rem;
   font-family: PingFang SC;
   color: #333333;
-  line-height: 1.2;
+  line-height: 2;
   padding-left: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.index .search-box,
+.case .search-box {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0 1.5rem;
+  justify-content: space-between;
+}
+.index .search,
+.case .search {
+  width: 27rem;
+  overflow: hidden;
+  position: relative;
+  margin-right: 1rem;
+}
+.index .search .search-icon,
+.case .search .search-icon {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  margin-top: -1.2rem;
+}
+.index .search-input,
+.case .search-input {
+  height: 3rem;
+  border: 0;
+  padding-left: 4rem;
+  padding-right: 1rem;
+  background-color: #eee;
+  font-size: 1.4rem;
+  box-shadow: none;
+  color: #999999;
+}
+.index .filter-box-m,
+.case .filter-box-m {
+  font-size: 1.4rem;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.index .filter-icon,
+.case .filter-icon {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 .banner-common {
   width: 100%;
@@ -1793,14 +1788,14 @@ body {
 .banner-common .wrapper {
   position: absolute;
   left: 0;
-  padding-left: 1rem;
+  padding-left: 3rem;
   bottom: 2rem;
 }
 .banner-common .banner-title-en {
   font-size: 3.4rem;
   font-family: Rajdhani;
   font-weight: bold;
-  color: #d10223;
+  color: #D10223;
 }
 .banner-common .banner-title-cn {
   font-size: 1.8rem;
@@ -1868,8 +1863,8 @@ body {
   margin: 0 0.5rem;
 }
 .pagination .current {
-  background: #d10223;
-  border-radius: 0.4rem;
+  background: #D10223;
+  border-radius: 1rem;
 }
 .pagination .current .nav-a-all {
   color: #fff;

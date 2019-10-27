@@ -1,3 +1,4 @@
+// 侧边导航栏
 var open = document.getElementById('open')
 var close = document.getElementById('close')
 var navbarMask = document.getElementById('navbarMask')
@@ -20,11 +21,11 @@ close.addEventListener('click', function() {
 		navbarMask.style.display = 'none'
 	}, 500)
 })
+
+// 底部百度地图
 var map = new BMap.Map('map'); // 创建Map实例
 var position;
 map.centerAndZoom(new BMap.Point(116.398232, 39.914714), 15); // 初始化地图,设置中心点坐标和地图级别
-
-
 map.addControl(
 	new BMap.MapTypeControl({
 		mapTypes: [BMAP_NORMAL_MAP, BMAP_SATELLITE_MAP, BMAP_HYBRID_MAP]

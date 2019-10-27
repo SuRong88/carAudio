@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="format-detection" content="telephone=no" />
-		<meta http-equiv="x-rim-auto-match" content="none"> 
+		<meta http-equiv="x-rim-auto-match" content="none">
 		<link rel="stylesheet" type="text/css" href="css/layout.css?v=1.0.0">
 		<link rel="stylesheet" type="text/css" href="css/common.css">
 		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=eu0WedayzrZKPfvQAFxoVqF9zazdwbxg&s=1">
@@ -61,7 +61,7 @@
 		</div>
 		<ul class="menu-common">
 			<li>
-				<a href="" class="nav-a-all">
+				<a href="case.html" class="nav-a-all">
 					<img class="icon" src="images/m/trumpet.png" alt="">
 					<span class="menu-title">
 						音响改装
@@ -69,7 +69,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="" class="nav-a-all">
+				<a href="tm-case.html" class="nav-a-all">
 					<img class="icon" src="images/m/car.png" alt="">
 					<span class="menu-title">
 						汽车贴膜
@@ -82,7 +82,7 @@
 				<div class="breadcrumb">
 					您的位置：首页 > 活动及资讯 >
 				</div>
-				<ul class="nav">
+				<ul class="nav" id="nav">
 					<li class="nav-item active">全部</li>
 					<li class="nav-item">促销</li>
 					<li class="nav-item">活动</li>
@@ -90,7 +90,7 @@
 				</ul>
 				<ul class="result-box">
 					<li class="res-item">
-						<a href="" class="nav-a-all">
+						<a href="detail.html" class="nav-a-all">
 							<div class="l"><img src="images/brand/re.jpg" alt="" /></div>
 							<div class="r">
 								<!-- 新闻black  促销red  活动yellow -->
@@ -103,7 +103,7 @@
 						</a>
 					</li>
 					<li class="res-item">
-						<a href="" class="nav-a-all">
+						<a href="detail.html" class="nav-a-all">
 							<div class="l"><img src="images/brand/re.jpg" alt="" /></div>
 							<div class="r">
 								<!-- 新闻black  促销red  活动yellow -->
@@ -116,7 +116,7 @@
 						</a>
 					</li>
 					<li class="res-item">
-						<a href="" class="nav-a-all">
+						<a href="detail.html" class="nav-a-all">
 							<div class="l"><img src="images/brand/re.jpg" alt="" /></div>
 							<div class="r">
 								<!-- 新闻black  促销red  活动yellow -->
@@ -199,12 +199,23 @@
 
 		<a href="tel:15015050896" class="service">
 			<img class="tel-icon" src="images/m/tel.png" alt="">
-			<span  class="txt">
+			<span class="txt">
 				电话咨询音响码头
 			</span>
 		</a>
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			// 活动资讯导航栏
+			var nav = document.getElementById('nav')
+			navLists = nav.children
+			for (let i = 0; i < navLists.length; i++) {
+				navLists[i].onclick = function() {
+					for (let j = 0; j < navLists.length; j++) {
+						navLists[j].classList.remove('active')
+					}
+					navLists[i].classList.add('active')
+				}
+			}
 		</script>
 	</body>
 </html>
