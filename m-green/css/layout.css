@@ -1719,6 +1719,7 @@ body {
 .case .hot-box .hot-item .title,
 .detail .hot-box .hot-item .title,
 .about .hot-box .hot-item .title {
+  height: 4em;
   margin-top: -0.4rem;
   flex: 1;
   font-size: 1.4rem;
