@@ -1584,6 +1584,11 @@ body {
   background: #ffffff;
   padding: 0 45px 50px;
   min-width: 1200px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .about .introduce .content {
   width: 100%;
@@ -1851,6 +1856,30 @@ body {
   font-family: PingFang SC;
   font-weight: 400;
   color: #333333;
+}
+.banner-about {
+  height: 100vh;
+  width: 100%;
+  background: url(../images/about/banner.jpg) no-repeat center center;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+.banner-about .wrapper {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+}
+.banner-about .banner-title-en {
+  font-size: 156px;
+  font-family: Rajdhani;
+  font-weight: bold;
+  color: #b7c91b;
+}
+.banner-about .banner-title-cn {
+  font-size: 72px;
+  color: #ffffff;
 }
 .banner-common {
   width: 100%;

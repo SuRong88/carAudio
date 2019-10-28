@@ -33,12 +33,12 @@
 				</div>
 			</div>
 		</header>
-		<div class="banner-common" id="banner">
+		<div class="banner-about" id="banner">
 			<div class="wrapper">
 				<div class="banner-title-en">ABOUT US</div>
 				<div class="banner-title-cn">关于我们</div>
 			</div>
-			<img class="banner-img" src="images/about/banner.jpg" alt="">
+			<!-- <img class="banner-img" src="images/about/banner.jpg" alt=""> -->
 		</div>
 		<div class="about">
 			<div class="history">
@@ -55,9 +55,9 @@
 					</div>
 
 					<div class="more-box">
-						<div class="more">
+						<div class="more" id="moreBtn">
 							<img class="arrow-down" src="images/about/down.png" alt="" />
-							<p class="more-txt">向下滑动 了解更多</p>
+							<p class="more-txt">点击了解更多</p>
 						</div>
 						<img class="mul01" src="images/about/mul01.png" alt="" />
 					</div>
@@ -380,20 +380,33 @@
 			var navbar = document.getElementById('navbar')
 			var height2 = navbar.offsetHeight
 			var body = document.body
-			window.onscroll = function() {
-				if(document.documentElement.scrollTop>50){
-					console.log(document.documentElement.scrollTop)
-					banner.style.marginTop = -height+height2+'px'
-					navbar.style.position = 'fixed';
-					navbar.style.paddingTop = '14px'
-					body.style.paddingTop = navbar.offsetHeight + 'px'
-				} 
-			else{
-					banner.style.marginTop = '0px'
-					navbar.style.position = 'relative';
-					navbar.style.paddingTop = '0'
-					body.style.paddingTop = 0
-				} 
+			var moreBtn = document.getElementById('moreBtn')
+			//创建变量
+			var scroll_Top = document.getElementById('top');
+			//用最常用的scrollTop属性实现
+			var timer = null;
+			function scrollTop(){
+				// 取消一个通过调用requestAnimationFrame()方法添加到计划中的动画帧请求.
+				cancelAnimationFrame(timer);
+				/* requestAnimationFrame 会把每一帧中的所有DOM操作集中起来，
+				在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率
+				一般来说，这个频率为每秒60帧。 */
+				timer = requestAnimationFrame(function sTop(){
+					var top = document.body.scrollTop || document.documentElement.scrollTop;
+					if(top < height){
+			            //使用定时器，将scrollTop的值每次减少20（自行设置），直到减少到0，则滚动完毕
+						document.body.scrollTop = document.documentElement.scrollTop = top + 20;
+						timer = requestAnimationFrame(sTop);
+					}else{
+						cancelAnimationFrame(timer);
+					} 
+				});
+			}
+			moreBtn.onclick = function() {
+					scrollTop()
+					// console.log(height-height2)
+					// navbar.style.position = 'fixed';
+					// navbar.style.paddingTop = '14px'
 			};
 			// 热门改装推荐
 			var length = document.getElementById('hot').children.length;
