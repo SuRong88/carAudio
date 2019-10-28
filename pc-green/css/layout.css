@@ -303,7 +303,6 @@ body {
   height: 48px;
 }
 .header .hd-r {
-  margin-right: -50px;
   padding-top: 25px;
   display: flex;
 }
@@ -511,6 +510,7 @@ body {
 .index .main .quality .title-en,
 .index .main .refit .title-en,
 .index .main .new .title-en {
+  line-height: 1;
   font-size: 60px;
   font-family: Rajdhani;
   font-weight: bold;
@@ -523,7 +523,7 @@ body {
   font-family: Source Han Sans CN;
   font-weight: 300;
   color: #000000;
-  margin: 20px auto 55px;
+  margin: 10px auto 55px;
 }
 .index .main .quality {
   height: 690px;
@@ -974,7 +974,6 @@ body {
   margin-top: 22px;
 }
 .case .refit .filter-item-brand {
-  display: flex;
   flex-wrap: nowrap;
 }
 .case .refit .filter-item-brand.active {
@@ -1541,21 +1540,33 @@ body {
   flex: 1;
 }
 .about .history .banner02 .history-info li {
+  padding-left: 20px;
   opacity: 0.7;
   font-size: 16px;
   color: #ffffff;
   line-height: 150%;
   margin-bottom: 2px;
+  position: relative;
+  text-align: left;
 }
 .about .history .banner02 .history-info li:before {
   content: '';
   display: inline-block;
-  margin-right: 13px;
+  position: absolute;
+  left: 0;
+  top: 12px;
   margin-top: -3px;
   width: 6px;
   height: 6px;
   background: #b7c91b;
   border-radius: 50%;
+}
+.about .history .banner02 .history-subtitle {
+  padding-left: 20px;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1;
 }
 .about .history .banner02 .development {
   height: 700px;
@@ -1949,12 +1960,21 @@ body {
   cursor: text !important;
 }
 .main #brandBox .filter-item-brand {
-  justify-content: center;
   align-items: center;
   line-height: 32px !important;
   padding: 0px !important;
   width: 145px !important;
   display: none;
+  border: 1px solid #fff;
+  justify-content: flex-start !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main #brandBox .filter-item-brand.active {
+  border: 1px solid #b7c91b;
 }
 .main #brandBox .filter-item-brand.active:hover {
   color: #b7c91b !important;

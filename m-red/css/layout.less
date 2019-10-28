@@ -668,13 +668,21 @@ body {
 		top: 0;
 		padding: 5rem 1.5rem;
 	}
+	.filter{
+		&:first-child{
+			.filter-txt {
+				margin-top: 1rem;
+			}
+		}
+	}
 	.filter-txt {
 		display: block;
 		font-size: 1.8rem;
 		font-family: PingFang SC;
 		font-weight: bold;
 		color: rgba(51, 51, 51, 1);
-		margin-bottom: 1.5rem;
+		margin-top: 3rem;
+		margin-bottom: 1.8rem;
 	}
 	.filter-w {
 		// display: flex;
@@ -1716,16 +1724,19 @@ body {
 			.history-info {
 				flex: 1;
 				li {
-					// padding-left: 13px;
+					padding-left: 1.5rem;
 					opacity: 0.7;
 					font-size: 0.9rem;
 					color: #ffffff;
 					line-height: 150%;
 					margin-bottom: 0.2rem;
+					position: relative;
 					&:before {
 						content: '';
 						display: inline-block;
-						margin-right: 13px;
+						position: absolute;
+						left: 0;
+						top: 0.75rem;
 						margin-top: -3px;
 						width: 6px;
 						height: 6px;
@@ -1734,7 +1745,14 @@ body {
 					}
 				}
 			}
-
+			.history-subtitle{
+				line-height: 1;
+				padding-left: 1.5rem;
+				font-size:1.2rem;
+				font-weight:500;
+				color: #fff;
+				margin-bottom: 1rem;
+			}
 			.development {
 				height: 80%;
 				width: 100%;
@@ -1956,9 +1974,10 @@ body {
 	}
 	.search {
 		width: 27rem;
+		width: 83%;
 		overflow: hidden;
 		position: relative;
-		margin-right: 1rem;
+		// margin-right: 1rem;
 		.search-icon{
 			display: block;
 			width: 2.4rem;
@@ -1970,6 +1989,7 @@ body {
 		}
 	}
 	.search-input {
+		width: 100%;
 		height: 3rem;
 		border: 0;
 		padding-left: 4rem;
@@ -1980,12 +2000,15 @@ body {
 		color:rgba(153,153,153,1);
 	}
 	.filter-box-m {
+		width: 17%;
 		font-size: 1.4rem;
 		font-family: PingFang SC;
 		font-weight: 400;
 		color: rgba(51, 51, 51, 1);
 		display: flex;
 		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: flex-end;
 	}
 	.filter-icon {
 		width: 2.4rem;

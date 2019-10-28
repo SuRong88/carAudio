@@ -3,7 +3,7 @@ var banner =document.getElementById('banner')
 var body = document.body
 var header = document.getElementById('header')
 window.onscroll = function() {
-	// console.log(document.documentElement.scrollTop)
+	console.log(document.documentElement.scrollTop)
 	// console.log(document.getElementById('banner').offsetHeight)
 	if (document.documentElement.scrollTop <=banner.offsetHeight) {
 		navbar.style.position = 'relative';
